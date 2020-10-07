@@ -1,0 +1,163 @@
+/* 标题部分 */
+.result {
+  margin-top: 60px;
+}
+.result .title {
+  height: 30px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.result .title h2 {
+  margin-right: 15px;
+}
+.result .title .num {
+  color: grey;
+}
+.result .el-tabs__item {
+  font-size: 18px;
+}
+.el-tabs__item.is-active {
+  color: #c3473a;
+}
+.el-tabs__item:hover {
+  color: #c3473a;
+  cursor: pointer;
+}
+.el-tabs__item {
+  padding: 0 20px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 40px;
+  /* display: inline-block; */
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  /* color: #303133; */
+  position: relative;
+}
+
+.el-tabs__active-bar {
+  background-color: #c3473a;
+}
+
+/* 歌曲 */
+.result thead th {
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+  height: 50px;
+  width: 50px;
+  text-align: left;
+}
+.result thead th.music-title {
+  width: 300px;
+}
+.result thead th.singer {
+  width: 200px;
+}
+.result thead th.abulm {
+  width: 400px;
+}
+/* .result thead th.time {
+  width: 400px;
+} */
+.result tbody tr {
+  height: 50px;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  font-size: 14px;
+  color: #606266;
+}
+.result tbody tr:nth-child(2n + 1) {
+  background-color: #fafafa;
+}
+.result tbody tr:hover {
+  background-color: #f5f7fa;
+}
+
+/* 歌单 */
+.result .items {
+  overflow: hidden;
+}
+.result .item {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+}
+.result .el-tabs .item .img-wrap {
+  width: 200px;
+  position: relative;
+}
+.result .item .img-wrap .num-wrap {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #fff;
+}
+.result .item .img-wrap img {
+  border-radius: 5px;
+  width: 200px;
+}
+.result .item .img-wrap .play-btn {
+  width: 40px;
+  height: 40px;
+  background: hsla(0, 0%, 100%, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0;
+}
+.result .item .img-wrap .play-btn:after {
+  content: "\ea1c";
+  color: #dd6d60;
+  font-size: 28px;
+  transform: translate(3px);
+}
+.result .item .img-wrap:hover .play-btn {
+  opacity: 1;
+}
+.result .item .name {
+  font-size: 15px;
+  padding: 0 5px;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+}
+.result .mvs-content .item .info-wrap .info-txt {
+  color: grey;
+  font-size: 14px;
+}
+/* 分页 */
+.el-pagination.is-background {
+  text-align: center;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: #dd6d60;
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  color: #dd6d60;
+}
+/* 歌單結束 */
+
+/* mv開始 */
+.mvs-content .items .img-wrap {
+  position: relative;
+  width: 250px;
+}
+.mvs-content .items .img-wrap > .num {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.mvs-content .items .img-wrap > img {
+  width: 250px;
+}
+/* MV结束 */

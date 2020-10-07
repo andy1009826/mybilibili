@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+.iconfont {
+  font-family: "icomoon";
+}
+.song-list {
+  width: 1100px;
+  /* overflow: hidden; */
+}
+/* 头部卡片  */
+.top-card {
+  position: relative;
+  height: 200px;
+  /* background-color: pink; */
+  margin-top: 60px;
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.top-card .img-wrap {
+  margin-right: 20px;
+  z-index: 1;
+}
+.top-card .img-wrap img {
+  width: 160px;
+  height: 160px;
+}
+.top-card .content-wrap .tag {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #dfac67;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  color: #dfac67;
+  border-radius: 5px;
+}
+.top-card .content-wrap .title {
+  margin-top: 10px;
+  color: #fff;
+}
+.top-card .content-wrap .info {
+  margin-top: 5px;
+  width: 880px;
+  height: 95px;
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* -webkit-box-orient：vertical; */
+  -webkit-box-orient: vertical;
+  color: #888482;
+}
+.top-card .content-wrap .bg-mask {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -999;
+}
+.top-card .content-wrap img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -999;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+}
+/* tab栏 */
+.tab-container {
+  width: 100%;
+  height: 594px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.tab-container .tab-bar {
+  margin: 25px 0;
+  text-align: right;
+  /* border: 1px solid red; */
+}
+
+.tab-container .tab-bar .item {
+  padding: 0 10px;
+  font-size: 14px;
+  color: grey;
+  cursor: pointer;
+}
+.tab-container .tab-bar .active {
+  color: #dd6d60;
+}
+
+.tab-container .tab-content .item {
+  /* position: relative; */
+  overflow: hidden;
+  width: 200px;
+  height: 242px;
+  /* display: inline-block; */
+  float: left;
+  margin: 0 8px 20px 8px;
+}
+.tab-container .item .num-wrap {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  line-height: 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+.tab-container .img-wrap {
+  position: relative;
+  width: 200px;
+}
+.tab-container .img-wrap:hover .num-wrap {
+  transform: translateY(30px);
+}
+.tab-container .img-wrap img {
+  width: 200px;
+  border-radius: 5px;
+}
+.tab-container .img-wrap .play-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.tab-container .img-wrap .play-btn:after {
+  content: "\ea1c";
+  color: #dd6d60;
+  font-size: 28px;
+  transform: translate(3px);
+}
+.tab-container .img-wrap:hover .play-btn {
+  opacity: 1;
+}
+.tab-container .item .name {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 分页 */
+.el-pagination {
+  margin-bottom: 100px;
+}
+.el-pagination.is-background {
+  text-align: center;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: #dd6d60;
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  color: #dd6d60;
+}

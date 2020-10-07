@@ -1,0 +1,262 @@
+/* 轮播图 */
+.el-carousel {
+  margin: 70px 20px 0 20px;
+}
+.el-carousel__item {
+  border-radius: 8px;
+}
+.el-carousel__item img {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+  width: 550px;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+/* 推荐歌单 */
+.recommond {
+  width: 100%;
+  height: 530px;
+  /* background-color: pink; */
+  padding-left: 10px;
+}
+.recommond h3 {
+  font-weight: 400;
+}
+.recommond .items {
+  margin-top: 10px;
+}
+.recommond .items .item {
+  float: left;
+  margin: 10px;
+  /* background-color: skyblue; */
+  width: 200px;
+  height: 223px;
+}
+.recommond .item .item-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.recommond .item-wrap .item-txt {
+  /* display: none; */
+  position: absolute;
+  top: -45px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  transition: 0.5s;
+}
+.recommond .item-wrap:hover .item-txt {
+  transform: translateY(45px);
+}
+
+.recommond img {
+  border-radius: 6px;
+  width: 200px;
+}
+.recommond .item-wrap .play-btn {
+  visibility: hidden;
+  /* display: none; */
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.5s;
+  opacity: 0;
+}
+.recommond .item-wrap:hover .play-btn {
+  visibility: visible;
+  opacity: 1;
+}
+.iconfont {
+  font-family: "icomoon";
+}
+.recommond .item-wrap .play-btn:after {
+  content: "\ea1c";
+  /* width: 0;
+    height: 0; */
+  color: #dd6d60;
+  font-size: 28px;
+  /* display: block; */
+  transform: translateX(3px);
+}
+.recommond .item .name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+/* 最新音乐 */
+.music {
+  margin-top: 40px;
+  padding-left: 10px;
+}
+.music h3 {
+  font-weight: 400;
+}
+.music .items {
+  margin-top: 10px;
+  height: 500px;
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
+  display: flex;
+  /* -webkit-box-orient: vertical;
+  -webkit-box-direction: normal; */
+  /* -ms-flex-direction: column; */
+  flex-direction: column;
+  /* -ms-flex-wrap: wrap; */
+  flex-wrap: wrap;
+}
+.music .items .item {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  /* background-color: skyblue; */
+  margin-right: 10px;
+
+  padding-left: 15px;
+  transition: 0.5s;
+}
+.music .items .item:hover {
+  background-color: rgba(241, 242, 243, 0.5);
+}
+.music .img-wrap {
+  position: relative;
+}
+.music .img-wrap img {
+  width: 80px;
+  height: 80px;
+}
+.music .img-wrap .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-radius: 50%;
+  transition: 0.5s;
+  opacity: 0;
+}
+.music .img-wrap .play-btn:after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\ea1c";
+  color: #dd6d60;
+  font-size: 20px;
+  transform: translate(2px, 4px);
+}
+.music .img-wrap:hover .play-btn {
+  opacity: 1;
+}
+.music .song-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* -webkit-box-orient: vertical; */
+  /* -webkit-box-direction: normal; */
+  /* -ms-flex-direction: column; */
+  flex-direction: column;
+  /* -ms-flex-pack: distribute; */
+  justify-content: space-around;
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+/* .music .song-wrap .song-name {
+} */
+.music .song-wrap .songer {
+  font-size: 14px;
+  color: grey;
+}
+
+/* 最新MV */
+.discovery .mvs {
+  /* height: 255px; */
+  width: 100%;
+  /* background-color: skyblue; */
+  margin: 40px 0 340px 0;
+  padding-left: 10px;
+}
+.mvs h3 {
+  font-weight: 400;
+}
+.mvs .items {
+  margin-top: 10px;
+}
+.mvs .items .item {
+  width: 250px;
+  box-sizing: border-box;
+  padding: 10px;
+  float: left;
+  margin: 0 10px;
+}
+.mvs .img-wrap {
+  width: 250px;
+  position: relative;
+}
+
+.mvs .img-wrap .num-wrap .play-num {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+.mvs .img-wrap .num-wrap .play-num:before {
+  content: "\ea1c";
+}
+.mvs .img-wrap .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: hsla(0, 0%, 100%, 0.8);
+  opacity: 0;
+  transition: 0.5s;
+}
+.mvs .img-wrap .play-btn:after {
+  content: "\ea1c";
+  color: #dd6d60;
+  font-size: 28px;
+  display: flex;
+  transform: translate(2px, 5px);
+  justify-content: center;
+}
+.mvs .img-wrap:hover .play-btn {
+  opacity: 1;
+}
+.mvs .img-wrap img {
+  width: 250px;
+  border-radius: 5px;
+}
+.mvs .info-wrap {
+  font-size: 14px;
+}
+.mvs .info-wrap .singer {
+  color: grey;
+  margin: 10px 0;
+}
