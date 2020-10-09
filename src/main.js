@@ -23,6 +23,8 @@ import songlist from "./views/songlist.vue";
 import music from "./views/music.vue";
 import mvs from "./views/mvs.vue";
 import searchresult from "./views/searchresult.vue";
+import playlist from "./views/playlist.vue";
+import playmvs from "./views/playmvs.vue";
 
 // 创建路由
 let router = new VueRouter({
@@ -66,6 +68,18 @@ let router = new VueRouter({
       path: "/searchresult",
       // 组件
       component: searchresult,
+    },
+    {
+      //歌单详情页
+      path: "/playlist",
+      // 组件
+      component: playlist,
+    },
+    {
+      //mv详情页
+      path: "/playmvs",
+      // 组件
+      component: playmvs,
     },
   ],
 });

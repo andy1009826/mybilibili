@@ -36,7 +36,12 @@
       <!-- 歌单 -->
       <el-tab-pane label="歌单" name="second">
         <div class="items">
-          <div v-for="(item, index) in lists" :key="index" class="item">
+          <div
+            v-for="(item, index) in lists"
+            :key="index"
+            class="item"
+            @click="toPlaylist(item.id)"
+          >
             <div class="img-wrap">
               <div class="num-wrap">
                 播放量：
@@ -53,7 +58,12 @@
       <el-tab-pane label="MV" name="third">
         <div class="mvs-content">
           <div class="items">
-            <div v-for="(item, index) in mvlist" :key="index" class="item">
+            <div
+              v-for="(item, index) in mvlist"
+              :key="index"
+              class="item"
+              @click="toMv(item.id)"
+            >
               <div class="img-wrap">
                 <div class="num-wrap">
                   <span class="iconfont ico-play"></span>
@@ -182,7 +192,7 @@ export default {
           offset: (this.page - 1) * this.limit,
         },
       }).then((res) => {
-        console.log(res);
+        // console.log(res);
         this.mvlist = res.data.result.mvs;
         // 处理播放次数
         for (let i = 0; i < this.mvlist.length; i++) {
@@ -213,6 +223,18 @@ export default {
         this.$parent.musicUrl = url;
       });
     },
+
+    // 去歌单详情页
+    toPlaylist(id) {
+      // 跳转并携带数据
+      this.$router.push("/playlist?q=" + id);
+    },
+
+    // 去mv详情页
+    toMv(id) {
+      this.$router.push("/playmvs?q=" + id);
+    },
+
     handleCurrentChange(val) {
       // 保存页码 重新获取数据
       this.page = val;
